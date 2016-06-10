@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/ddbc2277f8.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <title>Sign Up</title>
+    
+
+  </head>
+
+  <body style=" background-image: url(https://pixabay.com/static/uploads/photo/2016/01/09/18/28/old-1130743_960_720.jpg); background-size: cover;">
+  <span style="font-family: 'Courgette', cursive; margin-top: 20px; margin-left: 20px; font-size: 100px; color:  #ffbb33;"> BlogSpace</span><i style="font-family: 'Courgette', cursive;font-size: 20px; color: #e69900 " >Simple Impartial Blogging</i>
+    
+  <form  class="col-md-3" style="width: 200px; margin-top: 200px ; margin-left: 20px   " method="POST" role="form">
+    
+  
+    <input type="" name="username" id="input" class="form-control" value="{{username}}" required="required"  placeholder="Username(unique)">
+    <br/>
+    <input type="password" name="password" id="input" class="form-control" required="required" placeholder="Password">
+    <br/>
+    <input type="password" name="verify" id="input" class="form-control" required="required"  placeholder="Verify your Password">
+    <br/>
+    <input type="email" name="email" id="input" class="form-control" value="{{email}}" required="required"  placeholder="Your E-Mail address">
+    <br/>
+    <input type="text" name="blogname" id="input" class="form-control" value="{{blogname}}" required="required" placeholder="Name of the Blog(unique)">
+    <br/>
+    
+    {% if error_username or error_password or error_email or error_blogname %}
+    <div style=" background-color: #ff6666; color: white; width:400px; border-radius: 3px ">
+      {{error_username}}
+      {{error_password}}
+      {{error_email}}
+      {{error_blogname}}
+      
+    </div><br/>
+    {% endif %}
+    <button type="submit" class="btn btn-primary">SignUp</button> or <a href="/login">LogIn</a>
+  </form>
+
+  </body>
+
+</html>
+

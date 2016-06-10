@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form  method="post" role="form">
+  <legend>New Post</legend>
+
+  <label>
+      <div>Subject</div>
+      <input type="text" class="form-control" name="subject" value="{{subject}}">
+   </label>
+   <br/><br/>
+  <label>
+      <div>Blog Post</div>
+      <textarea style=" display: inline-block;width: 800px; height: 200px; " class="form-control"  name="content">{{content}}</textarea>
+  </label> <span style=" color: red">{{error}}</span>
+    <br/><br/>
+  <button  style=" display: inline-block; " type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
+

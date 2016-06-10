@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/ddbc2277f8.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Signika:700' rel='stylesheet' type='text/css'>
+  <title>
+  {% if user %}
+    {{user.blogname}}
+  {% endif %}</title>
+</head>
+
+<body style=" background-image: url(http://science-all.com/images/wallpapers/silver-wallpaper/silver-wallpaper-8.jpg); background-repeat: repeat ">
+<nav class="navbar navbar-inverse">
+    
+      
+      <a class="navbar-brand" href="/blog">
+      {% if user %}
+        {{ user.name }}</a>
+    
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li><a  href="/blog/newpost"><i class="fa fa-plus" aria-hidden="true"></i>NewBlogpost</a></li>
+        <li ><a  href="/feed">BlogFeed</a></li>
+        <li ><a  href="/blog">Your Blog</a></li>
+        <li style=" margin-right: 5px; "><a  href="/logout">LogOut</a></li>
+      {% else %}
+        
+        <ul class="nav navbar-nav navbar-right">
+
+        <li><a  href="/login">Login</a></li>
+        <li><a  href="/signup">SignUp</a></li>
+      {% endif %}
+      </ul>
+    
+  <!-- /.container-fluid -->
+</nav>
+  <div class="container">
+  <div style="font-family: 'Signika', sans-serif; text-align: center; font-size: 50px ">
+    {% if feed %}
+      Blog Feed
+    {% elif user %}
+      {{user.blogname}}
+    {% else %}
+      Blog Feed
+    {% endif %}</div>
+  
+
+  
+
+  <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+  </div>
+  <footer class="footer-distributed">
+                
+                <h3 style=" display: inline-block; margin-left: 10px " >Diwakar <span>Vinay</span> M</h3><div style=" margin-top: 20px; display: inline-block; float: right; padding-right: 20px; padding-left: 15px; " >
+                    <a href="https://www.facebook.com/vinay.diwakar.3781"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/diwakar03m"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://github.com/magician03"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/diwakar-moturu-63219610a"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></div>
+                    
+
+                
+
+            </footer>
+</body>
+
+</html>
+
+
+

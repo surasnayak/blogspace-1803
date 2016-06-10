@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/ddbc2277f8.js"></script>
+    <title>LogIn</title>
+    
+  </head>
+
+  <body style=" background-image: url(https://pixabay.com/static/uploads/photo/2016/01/09/18/28/old-1130743_960_720.jpg); background-size: cover;">
+  <span style="font-family: 'Courgette', cursive; margin-top: 20px; margin-left: 20px; font-size: 100px; color:  #ffbb33;"> BlogSpace</span><i style="font-family: 'Courgette', cursive;font-size: 20px; color: #e69900 " >Simple Impartial Blogging</i>
+    
+  <form  class="col-md-3" style="width: 200px; margin-top: 150px ; margin-left: 20px   " method="POST" role="form">
+    
+    <input type="" name="username" id="input" class="form-control" value="{{username}}" required="required"  placeholder="Username(unique)">
+    <br/>
+    <input type="password" name="password" id="input" class="form-control" required="required" placeholder="Password">
+    <br/>
+    
+    {% if error %}
+    <div style=" background-color: #ff6666; color: white; width:400px; border-radius: 3px ">
+      {{ error }}
+      
+    </div><br/>
+    {% endif %}
+    <button type="submit" class="btn btn-primary">LogIn</button> or <a href="/signup">SignUp</a>
+  </form>
+
+  </body>
+
+</html>
+

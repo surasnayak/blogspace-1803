@@ -1,0 +1,12 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" style=" font-family: 'Lobster', cursive; font-size: 24px ; ">{{p.subject}}</h3>
+    <div>
+      {{p.user}} | {{p.created.strftime("%b %d, %Y")}}
+    </div>
+  </div>
+  <div class="panel-body" style=" font-family: 'Indie Flower', cursive; ">
+    {{p._render_text | safe}}
+  </div>
+</div>
