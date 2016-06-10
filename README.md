@@ -1,4 +1,4 @@
-### blogspace-1803###
+### Blogspace-1803###
 
 This multi-user blogging platform is built with Python2.7 Backend with Google App Engine for Python.This site is being hosted by Google Cloud Platform( free license ) and hence due to free resource limitations, might take some time to load or even crash sometimes. 
 
